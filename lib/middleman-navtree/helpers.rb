@@ -124,7 +124,7 @@ module Middleman
       # Example Name: 1%20-%20sink-or_swim
       def format_directory_name(dir_name)
         formatted_name = dir_name.gsub('%20', ' ') #=> 1 - sink-or_swim
-        # formatted_name.gsub!(/(?!\s)-(?!\s)/, ' ') #=> 1 - sink or_swim
+        formatted_name.gsub!(/(?!\s)-(?!\s)/, ' ') #=> 1 - sink or_swim
         formatted_name.gsub!(/_/, ' ') #=> 1 - sink or swim
         # @todo: Find a way for titleize to not blow away ' - ' formatting.
         # formatted_name.titleize! #=> 1 Sink or Swim
